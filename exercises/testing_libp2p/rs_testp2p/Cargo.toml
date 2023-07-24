@@ -1,0 +1,19 @@
+[package]
+name = "rs_p2p"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+libp2p = { version = "0.52.1", features = ["mdns", "tcp", "tokio", "macros", "floodsub", "identify", "ping", "dns", "websocket", "noise", "yamux", "gossipsub"] }
+tokio = { version = "1.29.1", features = ["io-util", "io-std", "macros", "rt", "rt-multi-thread", "sync", "time"] }
+rand = "0.8.5"
+futures = "0.3.28"
+env_logger = "0.10.0"
+libp2p-quic = "0.6.1"
+async-std = { version = "1.12", features = ["attributes"] }
+rustyline = "12.0.0"
+thiserror = "1.0.43"
+anyhow = "1.0.71"
+

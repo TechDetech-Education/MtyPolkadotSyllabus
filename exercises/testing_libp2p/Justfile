@@ -1,0 +1,24 @@
+set shell := ["bash", "-c"]
+container := "libp2p"
+# docker network create --driver bridge testing
+
+# Builds a container with a local app
+build TAG:
+  hyperfine -r 1 --show-output \
+    'docker build --build-arg RUST_APP={{TAG}} -t {{container}}:{{TAG}} .'
+
+# Runs a container with a local app
+run TAG NET="testing":
+  docker run \
+    --network={{NET}} --ip `just rnd_ip {{NET}}` \
+    --cap-add=NET_RAW --cap-add=NET_ADMIN -it {{container}}:{{TAG}}
+
+# Generates a random IP given a docker network
+rnd_ip NET:
+  @subnet=`docker network inspect {{NET}} | jq -r '.[0].subnets[0].subnet'`;\
+  ip_address="${subnet%.*}.$((RANDOM % 254 + 1))";\
+  echo "$ip_address"
+
+# Removes unused containers
+docker_clean:
+  docker rm `docker ps -aq`
