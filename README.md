@@ -2,7 +2,7 @@
 
 This present 4-month program is designed to prepare beginner programmers for the entry Rust exam of the Polkadot Blockchain Academy (PBA) by equipping them with the necessary knowledge and skills in Rust programming and smart contract development using Ink!. Throughout the program, students engage in hands-on activities, coding exercises, assessments, and discussions to reinforce their learning and prepare them for working as Smart-Contract developers in the Polkadot ecosystem.
 
-The program was designed taking in account the topics that students will face at the PBA (more details [here](./PBASummary.md)), the [PBA Rust entry exam](https://github.com/Polkadot-Blockchain-Academy/pba-qualifier-exam), and the Google's guide [📖 Comprehensive Rust](https://google.github.io/comprehensive-rust/). Extra resources worth mentioning are listed [here](./LearningResources.md). Each week has a dedicated `Exercise` link where the didactic material will be located.
+The program was designed taking in account the topics that students will face at the PBA (more details [here](./references/PBASummary.md)), the [PBA Rust entry exam](https://github.com/Polkadot-Blockchain-Academy/pba-qualifier-exam), and the Google's guide [📖 Comprehensive Rust](https://google.github.io/comprehensive-rust/). Extra resources worth mentioning are listed [here](./references/DevResources.md). Each week has a dedicated `Exercise` link where the didactic material will be located.
 
 ## Calendar (66 days - 22 weeks - 5 months)
 ```

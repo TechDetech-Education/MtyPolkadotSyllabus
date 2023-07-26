@@ -25,5 +25,5 @@ COPY ./${RUST_APP} /app/${RUST_APP}
 RUN cargo build --release
 
 ENV RUST_LOG=info
-# CMD ["/bin/bash"]
-CMD ["cargo", "run", "--release"]
+CMD ["/bin/bash"]
+# CMD ["cargo", "run", "--release"]
